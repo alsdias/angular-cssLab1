@@ -1,5 +1,9 @@
 ## BOOTSTRAP MANUAL INSTALL - METHOD 1
 
+
+
+![img](https://ultering.com/it4us/wp-content/uploads/2021/01/angular_cssLab1-1.jpg)
+
 **1. Download:**
 
 \- latest version:
