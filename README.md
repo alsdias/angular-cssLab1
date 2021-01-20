@@ -1,27 +1,50 @@
-# CssLab1
+## #METHOD1 - MANUAL INSTALL
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+**1. Download:**
 
-## Development server
+\- latest version:
+[getbootstrap.com/](https://getbootstrap.com/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+\- prior versions:
+[v.3.3](https://getbootstrap.com/docs/3.3/getting-started/#template)
+[v.3.3.7](http://blog.getbootstrap.com/2016/07/25/bootstrap-3-3-7-released/)
+[v.4.5](https://getbootstrap.com/docs/4.5/getting-started/download/)
 
-## Code scaffolding
+**2. Extract to style dir:**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+mkdir styles
+xcopy ...\bootstrap-4.5.3-dist ..\PROJECT_ROOT\src\styles /Y/S/I/E
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+![img](https://ultering.com/itstuff/wp-content/uploads/2021/01/angular_manual_bootstrap_install_cssLab1.jpg)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**3. Import the CSS.**
 
-## Running end-to-end tests
+Two alternatives:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+**3a. Edit "angular.json" and set:**
 
-## Further help
+"styles": [
+"src/styles.css",
+"src/styles/bootstrap-4.5.3-dist/css/bootstrap.css",
+"src/styles/css/album.css"
+],
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+or
+
+**3b. Use import:**
+@import './styles/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css';
+
+**4. If desired jquery, do:**
+npm install jquery popper.js –save
+
+ 
+
+***\**IMPORTANT NOTE:**
+Don't use the assets directory to set the CSS files.
+When deploying to the production using Angular CLI, the CSS files registered in angular.json are minified and bundled into a single styles.css.
+The assets folder is copied to the dist folder during the build process then, the CSS code get duplicated.
+Only place CSS files under assets if importing them directly in the index.html.
+
+ 
