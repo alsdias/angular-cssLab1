@@ -1,44 +1,27 @@
-# angular-cssLab1
+# CssLab1
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
-## BOOTSTRAP MANUAL INSTALLATION
+## Development server
 
-(2.1: Alternative: Local Bootstrap CSS)
-As an alternative, you can also download the Bootstrap CSS and add it locally to your project. 
-I donwloaded Bootstrap from the website and created a folder styles (same level as styles.css):
-@@img;;M:\work\devcli_\javascript\jstopics_bitbucket\cssLab1\support\docs\nodejs_local_bootstrap_install.jpg
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-1. Download:
-https://getbootstrap.com/
+## Code scaffolding
 
-2. Extract to style dir:
-mkdir styles
-xcopy ...\bootstrap-4.5.3-dist  ..\PROJECT_ROOT\src\styles /Y/S/I/E
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Build
 
-3. Import the CSS.
-Two alternatives:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-3a. Edit "angular.json" and set:
+## Running unit tests
 
-	"styles": [
-	  "src/styles.css",
-	  "src/styles/bootstrap-4.5.3-dist/css/bootstrap.css",
-	  "src/styles/css/album.css"
-	],
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-or
+## Running end-to-end tests
 
-3b. Use import:  
-  @import './styles/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css';
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-4. If desired jquery, do:
-    npm install jquery popper.js –save
+## Further help
 
-***IMPORTANT NOTE:
-Don't use the assets directory to set the CSS files.
-When deploying to the production using Angular CLI, the CSS files registered in angular.json are minified and bundled into a single styles.css. 
-The assets folder is copied to the dist folder during the build process then, the CSS code get duplicated. 
-Only place CSS files under assets if importing them directly in the index.html. 
-
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
