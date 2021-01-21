@@ -23,6 +23,8 @@ xcopy ...\bootstrap-4.5.3-dist ..\PROJECT_ROOT\src\styles /Y/S/I/E
 
 ![img](https://ultering.com/itstuff/wp-content/uploads/2021/01/angular_manual_bootstrap_install_cssLab1.jpg)
 
+
+
 **3. Import the CSS.**
 
 Two alternatives:
@@ -40,10 +42,19 @@ or
 **3b. Use import:**
 @import './styles/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css';
 
+
+
 **4. If desired jquery, do:**
 npm install jquery popper.js –save
 
- 
+   Edit angular.json and set:
+
+            "scripts": [
+            	"node_modules/jquery/dist/jquery.js",
+            	"node_modules/popper.js/dist/umd/popper.js",
+            	"node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
+
 
 ***\**IMPORTANT NOTE:**
 Don't use the assets directory to set the CSS files.
