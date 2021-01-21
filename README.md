@@ -31,12 +31,11 @@ Two alternatives:
 
 **3a. Edit "angular.json" and set:**
 
-"styles": [
-"src/styles.css",
-"src/styles/bootstrap-4.5.3-dist/css/bootstrap.css",
-"src/styles/css/album.css"
-],
-
+	"styles": [
+		"src/styles.css",
+		"src/styles/bootstrap-4.5.3-dist/css/bootstrap.css",
+		"src/styles/css/album.css"
+	],
 or
 
 **3b. Use import:**
